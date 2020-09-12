@@ -8,24 +8,47 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <section>
+    <section class="welcomeSite">
+    </section>
+    <section class="BlackjackBoard">
         <div class="wrapper">
-            <div class="playerHand">
-                <!-- Player -->
-                <h1>Player's Hand</h1>
-                <div class="playerOne"></div>
-                <div class="playerTwo"></div>
-                <div class="playerThree"></div>
-                <div class="playerFour"></div>
-                <div class="playerFive"></div>
+            <div class="handFlexContainer">
+                <div class="playerHand">
+                    <!-- Player -->
+                </div>
+                
+
+                <div class="dealerHand">
+                    <!-- Dealer -->
+
+                </div>
             </div>
+            <div class="scoreFlexContainer">
+                <div class="playerScore">
+                    <!-- Player Score -->
+                </div>
+                
 
+                <div class="dealerScore">
+                    <!-- Dealer Score -->
 
-            <div class="dealerHand">
-                <!-- Dealer -->
-                <h1>Dealer's Hand</h1>
-                <div class="dealerOne"></div>
-                <div class="dealerTwo"></div>
+                </div>
+            </div>
+            <div class="gameMessage">
+                <!-- Game message here -->
+            </div>
+        </div>
+        <div class="scoreBoard">
+            <h2 class="playerWins">Player: 0</h2>
+            <h2 class="dealerWins">Dealer: 0</h2>
+        </div>
+    </section>
+    <section class="BlackjackControls">
+        <div class="wrapper">
+            <div class="controlFlexContainer">
+                <button class="deal">Deal</button>
+                <button class="hit">Hit</button>
+                <button class="stay">Stay</button>
             </div>
         </div>
     </section>

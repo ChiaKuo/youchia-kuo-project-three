@@ -1,0 +1,36 @@
+.handFlexContainer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20vh;
+}
+
+.playerHand, .dealerHand{
+    display: flex;
+}
+
+.gameMessage {
+    text-align: center;
+    padding-top: 20vh;
+}
+
+// .controlFlexContainer {
+//     display: flex;
+//     justify-content: space-around;
+// }
+.scoreFlexContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.BlackjackBoard {
+    height: 100vh;
+    background-color: black;
+    border: 5px solid red;
+    position: relative;
+    .scoreBoard {
+        position: absolute;
+        width: 25%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
