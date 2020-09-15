@@ -1,0 +1,42 @@
+// Welcome page styles
+.welcomeSite {
+    .welcomeTitle {
+        padding-top: 30px;
+        margin: auto;
+        width: 50%;
+        h1, h2 {
+            color: black;
+            font-family: 'Philosopher', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h1 {
+            margin: 50px;
+            box-shadow: 10px 10px green;
+            border: 2px solid green;
+            font-size: 60px;
+        }
+        h2 {
+            margin: 70px;
+            font-size: 40px;
+        }
+        p {
+            margin: 70px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    // Start button styles
+    .startButton {
+        text-align: center;
+        .start {
+            margin: 10px;
+            font-size: 30px;
+            padding: 20px 50px;
+        }
+        .start:focus {
+            border: 1px solid yellow;
+        }
+    }
+}

@@ -227,10 +227,19 @@ textarea {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .welcomeSite {
-  height: 100vh;
+  height: 880px;
+  background-color: white;
+}
+
+.gameList {
+  height: 100%;
   background-color: black;
-  border: 5px solid red;
 }
 
 h1, h2 {
@@ -238,44 +247,302 @@ h1, h2 {
   color: white;
 }
 
-.handFlexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 20vh;
+.welcomeSite .welcomeTitle {
+  padding-top: 30px;
+  margin: auto;
+  width: 50%;
 }
 
-.playerHand, .dealerHand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gameMessage {
+.welcomeSite .welcomeTitle h1, .welcomeSite .welcomeTitle h2 {
+  color: black;
+  font-family: 'Philosopher', sans-serif;
+  text-transform: uppercase;
   text-align: center;
-  padding-top: 20vh;
 }
 
-.scoreFlexContainer {
+.welcomeSite .welcomeTitle h1 {
+  margin: 50px;
+  -webkit-box-shadow: 10px 10px green;
+          box-shadow: 10px 10px green;
+  border: 2px solid green;
+  font-size: 60px;
+}
+
+.welcomeSite .welcomeTitle h2 {
+  margin: 70px;
+  font-size: 40px;
+}
+
+.welcomeSite .welcomeTitle p {
+  margin: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+}
+
+.welcomeSite .startButton {
+  text-align: center;
+}
+
+.welcomeSite .startButton .start {
+  margin: 10px;
+  font-size: 30px;
+  padding: 20px 50px;
+}
+
+.welcomeSite .startButton .start:focus {
+  border: 1px solid yellow;
+}
+
+.gameList h1 {
+  text-align: center;
+  font-family: 'Purple Purse', cursive;
+  font-size: 5vw;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.gameImageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.BlackjackBoard {
-  height: 100vh;
-  background-color: black;
-  border: 5px solid red;
+.gameImageContainer .game {
+  padding: 50px 30px;
+  width: 41%;
   position: relative;
 }
 
-.BlackjackBoard .scoreBoard {
+.gameImageContainer .game img {
+  text-align: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.gameImageContainer .game img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.gameImageContainer .game .one, .gameImageContainer .game .two {
+  opacity: 0;
   position: absolute;
-  width: 25%;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gameImageContainer .game .one .name, .gameImageContainer .game .two .name {
+  font-size: 2.5vw;
+  font-family: 'Purple Purse', cursive;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.gameImageContainer .game .blackjack:hover ~ .one, .gameImageContainer .game .poker:hover ~ .two {
+  opacity: 1;
+}
+
+.blackjackBoard {
+  height: 100%;
+  min-height: 95vh;
+  background: url(../assets/slide-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.blackjackBoard .gameMessage {
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.blackjackBoard .scoreFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.blackjackBoard .handFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 5vh;
+}
+
+.blackjackBoard .handFlexContainer .playerHand, .blackjackBoard .handFlexContainer .dealerHand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+}
+
+.blackjackBoard .handFlexContainer .playerHand h2, .blackjackBoard .handFlexContainer .dealerHand h2 {
+  width: 3.75em;
+  height: 5.00em;
+  margin: 5px;
+  color: black;
+  background-color: white;
+  padding: 1%;
+  -webkit-box-shadow: 5px 10px black;
+          box-shadow: 5px 10px black;
+  position: relative;
+}
+
+.blackjackBoard .userFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 10vh;
+}
+
+.blackjackBoard .userFlexContainer h2 {
+  border: solid 5px white;
+  padding: 10px;
+}
+
+.blackjackBoard .scoreBoard {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.blackjackBoard .scoreBoard h2 {
+  font-size: 20px;
+}
+
+.blackjackControls {
+  background-color: green;
+  min-height: 5vh;
+  height: 100%;
+}
+
+.blackjackControls button {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+}
+
+.blackjackControls button:hover {
+  background-color: white;
+  color: black;
+}
+
+.blackjackControls button:focus {
+  border: 1px solid yellow;
+}
+
+footer {
+  background: #2c2c2c;
+  text-align: center;
+}
+
+footer p, footer a {
+  font-family: 'Chathura', sans-serif;
+  color: white;
+  font-size: 25px;
+  line-height: 45px;
+  letter-spacing: 1.9px;
+  font-weight: 700;
+}
+
+footer a:focus {
+  border: 1px solid yellow;
+}
+
+@media (max-width: 1080px) {
+  .welcomeSite {
+    height: 750px;
+  }
+  .welcomeSite .welcomeTitle h1 {
+    font-size: 50px;
+  }
+  .welcomeSite .welcomeTitle h2 {
+    margin: 70px 0;
+  }
+  .welcomeSite .welcomeTitle p {
+    margin: 70px 0;
+  }
+  .welcomeSite .startButton {
+    text-align: center;
+  }
+  .welcomeSite .startButton .start {
+    margin: 10px;
+    font-size: 20px;
+    padding: 15px 40px;
+  }
+  .gameImageContainer .game {
+    padding: 30px 10px;
+    width: 50%;
+  }
+  .gameImageContainer .game .one .name, .gameImageContainer .game .two .name {
+    font-size: 3.5vw;
+  }
+  .blackjackBoard .gameMessage {
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 20px;
+  }
+  .blackjackBoard .gameMessage h1 {
+    font-size: 30px;
+  }
+  .blackjackBoard .handFlexContainer {
+    padding-top: 3vh;
+  }
+  .blackjackBoard .handFlexContainer .playerHand h2, .blackjackBoard .handFlexContainer .dealerHand h2 {
+    width: 2.8125em;
+    height: 3.75em;
+  }
+  .blackjackBoard .userFlexContainer {
+    padding-top: 8vh;
+  }
+  .blackjackBoard .userFlexContainer h2 {
+    border: solid 5px white;
+    padding: 10px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcomeSite {
+    height: 600px;
+  }
+  .welcomeSite .welcomeTitle h1 {
+    font-size: 35px;
+    margin: 0;
+  }
+  .welcomeSite .welcomeTitle h2 {
+    margin: 50px 0;
+    font-size: 30px;
+  }
+  .welcomeSite .welcomeTitle p {
+    margin: 40px 0;
+  }
+  .welcomeSite .startButton {
+    text-align: center;
+  }
+  .welcomeSite .startButton .start {
+    margin: 10px;
+    font-size: 20px;
+    padding: 15px 40px;
+  }
 }

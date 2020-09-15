@@ -1,0 +1,47 @@
+// Gamelist Title Styles
+.gameList {
+    h1 {
+        text-align: center;
+        font-family: 'Purple Purse', cursive;
+        font-size: 5vw;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+}
+
+// Game image styles
+.gameImageContainer {
+    display: flex;
+    justify-content: center;
+    .game {
+        padding: 50px 30px;
+        width: 41%;
+        position: relative;
+            img {
+                text-align: center;
+                filter: grayscale(100%);
+            }
+            img:hover {
+                filter: grayscale(0%);
+            }
+            
+            .one, .two {
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                .name {
+                    font-size: 2.5vw;
+                    font-family: 'Purple Purse', cursive;
+                    text-transform: uppercase;
+                    color: white;
+                    text-shadow: 2px 2px black; 
+                }
+            }
+            .blackjack:hover~.one, .poker:hover~.two {
+                opacity: 1;
+            }
+    }
+}

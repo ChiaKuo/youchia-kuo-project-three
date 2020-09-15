@@ -1,0 +1,96 @@
+@media (max-width: 1080px) {
+    // Welcome Page Styles
+    .welcomeSite {
+        height: 750px;
+        .welcomeTitle {
+            h1 {
+                font-size: 50px;
+            }
+            h2 {
+                margin: 70px 0;
+            }
+            p {
+                margin: 70px 0;
+            }
+        }
+        .startButton {
+            text-align: center;
+            .start {
+                margin: 10px;
+                font-size: 20px;
+                padding: 15px 40px;
+            }
+        }
+    }
+
+    // Game Page Styles
+    .gameImageContainer {
+        .game {
+            padding: 30px 10px;
+            width: 50%;
+            .one, .two {
+                .name {
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+
+    // Blackjack Page Styles
+    .blackjackBoard {
+        .gameMessage {
+            h1 {
+                font-size: 30px;
+            } 
+            text-align: center;
+            padding-top: 5vh;
+            padding-bottom: 20px;
+        }
+        .handFlexContainer {
+            padding-top: 3vh;
+            .playerHand, .dealerHand{
+                h2 {
+                    width: 2.8125em;
+                    height: 3.75em;
+                }
+            }
+        }
+        .userFlexContainer {
+            padding-top: 8vh;
+            h2 {
+                border: solid 5px white;
+                padding: 10px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    // Welcome Page Styles
+    .welcomeSite {
+        height: 600px;
+        .welcomeTitle {
+            h1 {
+                font-size: 35px;
+                margin: 0;
+            }
+            h2 {
+                margin: 50px 0;
+                font-size: 30px;
+            }
+            p {
+                margin: 40px 0;
+            }
+        }
+        .startButton {
+            text-align: center;
+            .start {
+                margin: 10px;
+                font-size: 20px;
+                padding: 15px 40px;
+            }
+        }
+    }
+}

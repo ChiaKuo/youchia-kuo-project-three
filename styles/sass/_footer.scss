@@ -1,0 +1,16 @@
+// Footer Style
+footer {
+    background: #2c2c2c;
+    text-align: center;
+    p, a {
+        font-family: 'Chathura', sans-serif;
+        color: white;
+        font-size: 25px;
+        line-height: 45px;
+        letter-spacing: 1.9px;
+        font-weight: 700;
+    }
+    a:focus {
+        border: 1px solid yellow;
+    }
+}

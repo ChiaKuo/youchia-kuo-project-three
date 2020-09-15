@@ -1,36 +1,86 @@
-.handFlexContainer {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 20vh;
-}
-
-.playerHand, .dealerHand{
-    display: flex;
-}
-
-.gameMessage {
-    text-align: center;
-    padding-top: 20vh;
-}
-
-// .controlFlexContainer {
-//     display: flex;
-//     justify-content: space-around;
-// }
-.scoreFlexContainer {
-    display: flex;
-    justify-content: space-around;
-}
-.BlackjackBoard {
-    height: 100vh;
-    background-color: black;
-    border: 5px solid red;
+// Blackjack page styles
+.blackjackBoard {
+    height: 100%;
+    min-height: 95vh;
+    // From https://dallascustompokertables.com/
+    background: url(../assets/slide-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
+
+    // Game message styles
+    .gameMessage { 
+        text-align: center;
+        padding-top: 10vh;
+    }
+    
+    // Score value styles 
+    .scoreFlexContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    // Hand styles
+    .handFlexContainer {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5vh;
+        .playerHand, .dealerHand{
+            display: flex;
+            flex-wrap : wrap;
+            justify-content: space-evenly;
+            margin: 10px;
+            padding: 10px;
+            h2 {
+                width: 3.75em;
+                height: 5.00em;
+                margin: 5px;
+                color: black;
+                background-color: white;
+                padding: 1%;
+                box-shadow: 5px 10px black;
+                position: relative;
+            }
+        }
+    }
+
+    // User name styles
+    .userFlexContainer {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10vh;
+        h2 {
+            border: solid 5px white;
+            padding: 10px;
+        }
+    }
+
+    // Score styles
     .scoreBoard {
         position: absolute;
-        width: 25%;
-        right: 0;
-        bottom: 0;
+        left: 0;
+        top: 0;
+        h2 {
+            font-size: 20px;
+        }
     }
 }
 
+// Control button styles
+.blackjackControls {
+    background-color: green;
+    min-height: 5vh;
+    height: 100%;
+    button {
+        background-color: black;
+        color: white;
+        padding: 10px 30px;
+    }
+    button:hover {
+        background-color: white;
+        color: black;
+    }
+    button:focus {
+        border: 1px solid yellow;
+    }
+}

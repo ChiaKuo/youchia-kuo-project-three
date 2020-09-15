@@ -1,20 +1,34 @@
 @import 'setup';
 
+// Preliminary Styles
+
 .wrapper {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
 
-.welcomeSite {
-    height: 100vh;
-    background-color: black;
-    border: 5px solid red;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-h1,h2 {
+.welcomeSite {
+    height: 880px;
+    background-color: white;
+}
+
+.gameList {
+    height: 100%;
+    background-color: black;   
+}
+
+h1, h2 {
     font-size: 40px;
     color: white;
 }
+@import 'welcome';
+@import 'games';
 @import 'blackjack';
-
+@import 'footer';
+@import 'media';
